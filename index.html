@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{ open: false }" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PT BERKAH TEKNOLOGI TERDEPAN</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/alpinejs" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/img/btt.png">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+</head>
+
+<body class="bg-white text-gray-800" x-data="{ loading: true }" x-init="setTimeout(() => loading = false, 1500)">
+
+  <!-- Loading Overlay -->
+  <div x-show="loading" x-transition
+    class="fixed inset-0 z-50 bg-white flex flex-col items-center justify-center text-blue-700 text-xl font-semibold">
+    <svg class="animate-spin h-10 w-10 mb-4 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+      viewBox="0 0 24 24">
+      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+    </svg>
+  </div>
+
+
+  <!-- Navbar -->
+  <header id="navbar" class="bg-transparent fixed w-full z-10 transition-all duration-300">
+
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <!-- Logo -->
+      <div class="w-60 lg:w-56 max-w-full px-5">
+        <a href="." class="ic-navbar-logo block w-full py-5">
+          <svg class="w-full h-auto fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 50" role="img"
+            aria-label="FutureCloud Logo">
+            <text id="logoText" x="0" y="35" font-size="32" font-family="Segoe UI, sans-serif" font-weight="600"
+              fill="white">
+              FUTURECLOUD<tspan id="logoDotId" font-weight="800" fill="white">.ID</tspan>
+            </text>
+          </svg>
+        </a>
+      </div>
+
+
+      <!-- Desktop Nav -->
+      <nav id="navLinks"
+        class="space-x-6 hidden md:flex text-[17px] font-semibold text-white transition-colors duration-300">
+        <a href="#about" class="hover:text-blue-300">Tentang</a>
+        <a href="#products" class="hover:text-blue-300">Produk</a>
+        <a href="#services" class="hover:text-blue-300">Layanan</a>
+        <a href="#testimonials" class="hover:text-blue-300">Testimoni</a>
+        <a href="#contact" class="hover:text-blue-300">Kontak</a>
+      </nav>
+
+
+      <!-- Mobile Menu Button -->
+      <button @click="open = !open" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Nav -->
+    <div x-show="open" class="md:hidden bg-white border-t border-gray-200 px-4 py-2 font-semibold">
+      <a href="#about" class="block py-2 hover:text-blue-600">Tentang</a>
+      <a href="#products" class="block py-2 hover:text-blue-600">Produk</a>
+      <a href="#services" class="block py-2 hover:text-blue-600">Layanan</a>
+      <a href="#testimonials" class="block py-2 hover:text-blue-600">Testimoni</a>
+      <a href="#contact" class="block py-2 hover:text-blue-600">Kontak</a>
+    </div>
+  </header>
+
+
+  <!-- Hero Section -->
+  <section class="pt-40 pb-20 bg-gradient-to-r from-blue-800 via-blue-600 to-cyan-500 text-white">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <h2 class="text-4xl sm:text-5xl font-extrabold mb-4 drop-shadow-lg">
+        PT. BERKAH TEKNOLOGI TERDEPAN
+      </h2>
+      <p class="text-xl sm:text-2xl tracking-widest uppercase font-semibold text-white/90">
+        Ultimate IT Solution
+      </p>
+      <div class="mt-10">
+        <a href="#"
+          class="inline-block bg-white text-blue-700 font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-blue-50 transition duration-300 ease-in-out">
+          Get Started
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-12">
+
+      <!-- Gambar -->
+      <div class="w-full lg:w-1/2">
+        <img src="assets/img/btt.png" alt="About Us" class="rounded-xl shadow-lg w-full h-auto object-cover">
+      </div>
+
+      <!-- Konten Teks -->
+      <div class="w-full lg:w-1/2">
+        <p class="text-blue-600 font-semibold text-sm uppercase mb-2">About Us</p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 leading-snug mb-6">
+          Empowering Innovation with<br />
+          Trusted IT Expertise
+        </h2>
+        <p class="text-gray-600 leading-relaxed mb-4 text-justify">
+          PT Berkah Teknologi Terdepan present as one of Indonesian IT solutions provider with the vision of becoming an
+          IT company providing solutions according to your business needs. We started with the idea of how to build an
+          enterprise IT efficiently and quickly.
+        </p>
+        <p class="text-gray-600 leading-relaxed mb-4 text-justify">
+          Since it's establishment in 2014, we have developed a close partnership with several hardware and software
+          vendors leading international, among others: HP, IBM, DELL, ERS, Google, Kentico, Meteor. In order to deliver
+          the best solutions for our clients.
+        </p>
+        <p class="text-gray-600 leading-relaxed text-justify">
+          We provide one stop solution for your IT-related matters. Whether it's a Data Center Hardware, Human Capital
+          and Employee Tracking Solution, Application Development, Enterprise IT Hardware, Consumer IT hardware and IOT
+          Solution - We handle it all.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Produk Kami Section -->
+  <section id="products" class="py-24 bg-gradient-to-b from-blue-50 to-white" x-data="{ showVideo: false }" x-cloak>
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-4xl font-bold text-center text-blue-800 mb-16">Produk Unggulan Kami</h3>
+
+      <div class="flex flex-col md:flex-row-reverse items-center gap-10">
+        <img src="assets/img/smartrack.png" alt="SmartTrack"
+          class="w-full md:w-1/2 rounded-xl shadow-lg transition-transform hover:scale-105 duration-300" />
+
+        <div class="md:w-1/2 text-center md:text-left">
+          <h4 class="text-3xl font-extrabold text-blue-700 mb-4">Smart Track</h4>
+          <p class="text-gray-700 leading-relaxed mb-6 text-justify">
+            Smart Track adalah solusi pelacakan real-time untuk absensi, aset, kendaraan, dan aktivitas operasional.
+          </p>
+          <ul class="text-gray-700 text-left list-disc list-inside mb-6 space-y-2">
+            <li>Absensi berbasis Face Recognition</li>
+            <li>Pelacakan lokasi dengan GPS real-time</li>
+            <li>Peta interaktif & histori perjalanan</li>
+            <li>Notifikasi otomatis dan laporan live</li>
+            <li>Kompatibel dengan platform Web & Mobile</li>
+          </ul>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="https://smartrack.id" target="_blank"
+              class="inline-block bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold shadow-md hover:bg-blue-800 transition">
+              Coba Sekarang
+            </a>
+            <button @click="showVideo = true"
+              class="inline-block border border-blue-700 text-blue-700 px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 hover:text-white transition">
+              Lihat Video
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Video -->
+    <div x-show="showVideo" x-transition.opacity x-data="{ videoUrl: 'assets/video/Smartrack.mp4' }"
+      x-init="$watch('showVideo', value => { if (!value) $refs.iframe.src = '' })"
+      class="fixed inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center z-50"
+      @click.self="showVideo = false" style="display: none;">
+
+      <!-- Iframe Video -->
+      <div class="bg-white rounded-lg overflow-hidden shadow-lg w-[90%] md:w-[720px] aspect-video relative">
+        <iframe x-ref="iframe" :src="showVideo ? videoUrl : ''" class="w-full h-full" frameborder="0"
+          allow="autoplay; encrypted-media" allowfullscreen>
+        </iframe>
+      </div>
+
+      <!-- Tombol Close di bawah video -->
+      <div class="mt-4">
+        <button @click="showVideo = false"
+          class="bg-white text-gray-700 hover:text-red-600 rounded-full w-10 h-10 flex items-center justify-center text-2xl font-bold leading-none shadow-md">
+          &times;
+        </button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-24 bg-gradient-to-b from-blue-50 to-white">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h3 class="text-4xl font-bold text-blue-800 mb-16">Layanan Kami</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+        <!-- Card 1: Application Development -->
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition overflow-hidden">
+          <img src="assets/img/slide1.jpg" alt="Application Development" class="w-full h-48 object-cover" />
+          <div class="p-6 text-left">
+            <h4 class="text-2xl font-semibold text-blue-700 mb-3">Application Development</h4>
+            <p class="text-gray-600 mb-4">Pengembangan aplikasi digital sesuai kebutuhan bisnis dan organisasi Anda.</p>
+            <ul class="text-gray-700 list-disc list-inside space-y-1 mb-4">
+              <li>Web Application</li>
+              <li>Mobile Application (Android/iOS)</li>
+              <li>Desktop Application</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition overflow-hidden">
+          <img src="assets/img/slide2.jpg" alt="IT Hardware & Appliance" class="w-full h-48 object-cover" />
+          <div class="p-6 text-left">
+            <h4 class="text-2xl font-semibold text-blue-700 mb-3">IT Hardware & Appliance</h4>
+            <p class="text-gray-600 mb-4">Penyediaan perangkat keras TI berkualitas tinggi untuk kebutuhan perusahaan.
+            </p>
+            <ul class="text-gray-700 list-disc list-inside space-y-1 mb-4">
+              <li>Laptop, PC, dan perangkat IoT</li>
+              <li>Printer & scanner</li>
+              <li>Garansi & layanan purna jual</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition overflow-hidden">
+          <img src="assets/img/slide3.jpg" alt="Data Center Hardware" class="w-full h-48 object-cover" />
+          <div class="p-6 text-left">
+            <h4 class="text-2xl font-semibold text-blue-700 mb-3">Data Center Hardware</h4>
+            <p class="text-gray-600 mb-4">Solusi infrastruktur data center terintegrasi untuk mendukung operasional
+              Anda.</p>
+            <ul class="text-gray-700 list-disc list-inside space-y-1 mb-4">
+              <li>PDU (Power Distribution Unit)</li>
+              <li>Server Rack & Raised Floor</li>
+              <li>Floor Panel & Fiber Duct</li>
+              <li>Cable Basket & lainnya</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Clients Section -->
+  <section id="clients" class="py-24 bg-gradient-to-b from-white to-blue-50">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <p class="text-blue-600 font-bold uppercase tracking-widest mb-2">Trusted By</p>
+      <h3 class="text-4xl font-extrabold text-gray-800 mb-4">Our Awesome Clients</h3>
+      <p class="text-gray-600 mb-14 max-w-2xl mx-auto">
+        Kami telah dipercaya oleh berbagai perusahaan dan brand ternama untuk membangun solusi teknologi terbaik dan
+        berkelanjutan.
+      </p>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 items-center">
+        <div class="transform hover:scale-105 transition duration-300 ease-in-out">
+          <img src="assets/img/kemenag-pdf.png" alt="KEMENAG"
+            class="h-20 mx-auto object-contain grayscale hover:grayscale-0 transition" />
+        </div>
+        <div class="transform hover:scale-105 transition duration-300 ease-in-out">
+          <img src="assets/img/jt-express-logo.png" alt="JNT"
+            class="h-20 mx-auto object-contain grayscale hover:grayscale-0 transition" />
+        </div>
+        <div class="transform hover:scale-105 transition duration-300 ease-in-out">
+          <img src="assets/img/logo_sixperience_white.png" alt="sixperience"
+            class="h-20 mx-auto object-contain grayscale hover:grayscale-0 transition" />
+        </div>
+        <div class="transform hover:scale-105 transition duration-300 ease-in-out">
+          <img src="assets/img/Blackhawk-Network.png" alt="Black Hawk"
+            class="h-20 mx-auto object-contain grayscale hover:grayscale-0 transition" />
+        </div>
+        <div class="transform hover:scale-105 transition duration-300 ease-in-out">
+          <img src="assets/img/maf.png" alt="MAF"
+            class="h-20 mx-auto object-contain grayscale hover:grayscale-0 transition" />
+        </div>
+        <div class="transform hover:scale-105 transition duration-300 ease-in-out">
+          <img src="assets/img/mcf.png" alt="MCF"
+            class="h-20 mx-auto object-contain grayscale hover:grayscale-0 transition" />
+        </div>
+        <div class="transform hover:scale-105 transition duration-300 ease-in-out">
+          <img src="assets/img/DNY.png" alt="DNY"
+            class="h-20 mx-auto object-contain grayscale hover:grayscale-0 transition" />
+        </div>
+        <div class="transform hover:scale-105 transition duration-300 ease-in-out">
+          <img src="assets/img/LogoBuanaTransparent.png" alt="BUANA"
+            class="h-20 mx-auto object-contain grayscale hover:grayscale-0 transition" />
+        </div>
+        <div class="transform hover:scale-105 transition duration-300 ease-in-out">
+          <img src="assets/img/ctsmain.png" alt="CTS"
+            class="h-20 mx-auto object-contain grayscale hover:grayscale-0 transition" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-24 bg-gradient-to-b from-blue-50 to-white">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <h3 class="text-4xl font-bold text-blue-800 mb-14">Apa Kata Klien Kami</h3>
+
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper pb-12">
+          <!-- Slide 1 -->
+          <div class="swiper-slide px-4">
+            <div
+              class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition flex flex-col md:flex-row items-center gap-6">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Andi"
+                class="w-20 h-20 rounded-full object-cover border-4 border-blue-100" />
+              <div class="text-left">
+                <svg class="w-6 h-6 text-blue-500 mb-2" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M7.17 6.17A5.002 5.002 0 002 11v1c0 1.1.9 2 2 2h3v-2H4v-1c0-1.66 1.34-3 3-3v-2zm9 0A5.002 5.002 0 0011 11v1c0 1.1.9 2 2 2h3v-2h-3v-1c0-1.66 1.34-3 3-3v-2z" />
+                </svg>
+                <h5 class="font-bold text-blue-700">Andi, CEO Startup</h5>
+                <p class="text-gray-600 mt-1 italic">"Pelayanan yang luar biasa! Website kami jadi jauh lebih
+                  profesional."</p>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="swiper-slide px-4">
+            <div
+              class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition flex flex-col md:flex-row items-center gap-6">
+              <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Budi"
+                class="w-20 h-20 rounded-full object-cover border-4 border-blue-100" />
+              <div class="text-left">
+                <svg class="w-6 h-6 text-blue-500 mb-2" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M7.17 6.17A5.002 5.002 0 002 11v1c0 1.1.9 2 2 2h3v-2H4v-1c0-1.66 1.34-3 3-3v-2zm9 0A5.002 5.002 0 0011 11v1c0 1.1.9 2 2 2h3v-2h-3v-1c0-1.66 1.34-3 3-3v-2z" />
+                </svg>
+                <h5 class="font-bold text-blue-700">Budi, Manager Operasional</h5>
+                <p class="text-gray-600 mt-1 italic">"Sistem informasi yang dibuat sangat membantu operasional kami."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Pagination Dots -->
+        <div class="swiper-pagination mt-10"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-24 bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500 text-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-4xl font-extrabold text-center mb-4 tracking-tight">Siap Kolaborasi Bersama Kami?</h3>
+      <p class="text-center mb-12 text-blue-100 text-lg">
+        Hubungi kami untuk konsultasi gratis mengenai kebutuhan digital Anda.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-10 items-start">
+        <!-- Map with Contact Info Below -->
+        <div>
+          <div
+            class="w-full h-96 rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-500 ease-in-out mb-6">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1983.5718668582116!2d106.8205834!3d-6.1861021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1720000000000"
+              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+
+          <!-- Contact Info (Below Map) -->
+          <div class="bg-white rounded-xl shadow-lg text-gray-800 p-6 space-y-4 text-sm">
+            <div>
+              <h5 class="font-semibold text-blue-700">🏢 Address</h5>
+              <p>
+                PT Berkah Teknologi Terdepan<br>
+                Gedung Jaya Lantai 5 unit A.6 JL. M.H Thamrin No.12, RT.002/RW.001<br>
+                Kb. Sirih, Kec. Menteng, Jakarta Pusat 10340
+              </p>
+            </div>
+            <div>
+              <h5 class="font-semibold text-blue-700">📞 Phone</h5>
+              <p>(+62) 815-2022-225</p>
+            </div>
+            <div>
+              <h5 class="font-semibold text-blue-700">✉️ Email</h5>
+              <p>info@smartrack.id</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="bg-white rounded-xl shadow-xl p-8 text-gray-800">
+          <h4 class="text-2xl font-bold mb-6 text-blue-700">Formulir Kontak</h4>
+          <form action="#" method="POST" class="space-y-5">
+            <div>
+              <label for="name" class="block text-sm font-medium">Nama</label>
+              <input type="text" id="name" name="name" required
+                class="mt-1 w-full rounded-lg border-gray-300 shadow-sm px-4 py-3 focus:ring-blue-500 focus:border-blue-500" />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium">Email</label>
+              <input type="email" id="email" name="email" required
+                class="mt-1 w-full rounded-lg border-gray-300 shadow-sm px-4 py-3 focus:ring-blue-500 focus:border-blue-500" />
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-medium">Pesan</label>
+              <textarea id="message" name="message" rows="4" required
+                class="mt-1 w-full rounded-lg border-gray-300 shadow-sm px-4 py-3 focus:ring-blue-500 focus:border-blue-500"></textarea>
+            </div>
+            <button type="submit"
+              class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
+              Kirim Pesan
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-300 py-6 text-center">
+    <p>&copy; 2025 PT. Berkah Teknologi Terdepan. Semua Hak Dilindungi.</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      }
+    });
+  </script>
+  <script>
+    const navbar = document.getElementById("navbar");
+    const navLinks = document.getElementById("navLinks");
+    const logoText = document.getElementById("logoText");
+    const logoDotId = document.getElementById("logoDotId");
+
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 10) {
+        navbar.classList.add("bg-white/60", "backdrop-blur-md", "shadow-md");
+        navLinks.classList.remove("text-white");
+        navLinks.classList.add("text-gray-900");
+
+        logoText.setAttribute("fill", "#1e3a8a"); // FUTURECLOUD
+        logoDotId.setAttribute("fill", "#1e3a8a"); // .ID
+      } else {
+        navbar.classList.remove("bg-white/60", "backdrop-blur-md", "shadow-md");
+        navLinks.classList.remove("text-gray-900");
+        navLinks.classList.add("text-white");
+
+        logoText.setAttribute("fill", "white");
+        logoDotId.setAttribute("fill", "white");
+      }
+    });
+  </script>
+
+
+  <!-- WhatsApp Floating Button -->
+  <div x-data="{ showForm: false, pesan: '' }" x-show="!loading" x-transition>
+    <!-- Tombol WhatsApp -->
+    <button @click="showForm = !showForm"
+      class="fixed bottom-6 right-6 bg-blue-700 hover:bg-blue-800 text-white p-4 rounded-full shadow-lg z-50 transition duration-300">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+        <path
+          d="M20.52 3.48A11.82 11.82 0 0 0 1.99 16.74L.27 23.72l7.17-1.87a11.84 11.84 0 0 0 5.07 1.19h.01a11.84 11.84 0 0 0 11.86-11.84 11.79 11.79 0 0 0-3.86-8.72zM12.5 21.41h-.01a9.62 9.62 0 0 1-4.88-1.34l-.35-.21-4.25 1.1 1.13-4.14-.23-.34A9.61 9.61 0 1 1 12.5 21.4zm5.38-7.26c-.29-.14-1.7-.84-1.96-.94s-.46-.14-.66.14c-.2.29-.76.94-.93 1.13-.17.2-.34.22-.63.08a7.83 7.83 0 0 1-2.3-1.42 8.69 8.69 0 0 1-1.61-2.02c-.17-.29 0-.45.13-.59.14-.13.29-.34.43-.51.14-.17.2-.29.3-.48.1-.19.05-.36-.02-.51-.08-.14-.66-1.58-.91-2.16-.24-.58-.48-.5-.66-.51h-.57a1.1 1.1 0 0 0-.8.37c-.27.29-1.03 1.01-1.03 2.46s1.06 2.85 1.21 3.05c.14.2 2.1 3.2 5.1 4.49.71.3 1.27.48 1.7.61.72.23 1.38.2 1.9.12.58-.09 1.7-.7 1.94-1.38.24-.68.24-1.26.17-1.38-.08-.12-.26-.19-.55-.33z" />
+      </svg>
+    </button>
+
+    <!-- Form Pesan -->
+    <div x-show="showForm" x-transition
+      class="fixed bottom-24 right-6 bg-white border border-blue-300 rounded-xl shadow-lg p-4 w-72 z-50">
+      <h4 class="text-lg font-bold mb-2 text-blue-700">Hubungi Kami via WhatsApp</h4>
+      <form
+        @submit.prevent="window.open(`https://wa.me/628152022225?text=${encodeURIComponent('Halo, Min Smart! ' + pesan)}`, '_blank')">
+        <textarea x-model="pesan" rows="3"
+          class="w-full border border-blue-300 rounded-md p-2 text-sm focus:outline-none focus:ring focus:border-blue-500"
+          placeholder="Ketik pesan Anda..."></textarea>
+        <button type="submit"
+          class="mt-3 w-full bg-blue-700 hover:bg-blue-800 text-white font-semibold py-2 px-4 rounded-md transition">
+          Kirim
+        </button>
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>
